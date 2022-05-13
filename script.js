@@ -37,7 +37,6 @@ const startAdventure = () => {
       "Welcome to Costco🛒 Your next decision may be your last..Shelter or Food?"
     );
   }
-
   if (playerAnswer != "shelter") {
     alert("Oh no! No food there, just zombies. ❌GAME OVER❌ 🫥");
   } else {
@@ -47,24 +46,41 @@ const startAdventure = () => {
   }
   if (playerAnswer != "bamboo") {
     playerAnswer = prompt(
-      "Ti Leaf will work great. What task will you do next? Build or eat?"
+      "Ti Leaf will work great. What task will you do next? Build🔨 or eat 🍽?"
     );
   } else {
     playerAnswer = prompt(
-      "Bamboo will work great. What task will you do next? Build or eat?"
+      "Bamboo will work great. What task will you do next? Build🔨 or eat 🍽?"
     );
   }
 
   if (playerAnswer != "eat") {
-    alert("Nice choice. You have completed Level One.");
+    playerAnswer = prompt(
+      "Nice choice！ Your area looks safe. Now that you have set up a basecamp will you rest💤 or explore🧭?"
+    );
   } else {
-    playerAnswer = prompt("There's two fruit trees! Noni or Mountainapple? ");
+    playerAnswer = prompt(
+      "Yum! You're lucky there was some Mountain apples🍎 in the area. Now will you rest💤 or explore🧭?"
+    );
   }
 
-  if (playerAnswer != "noni") {
-    playerAnswer = alert("Oh no! Bad apple! ❌GAME OVER❌");
+  if (playerAnswer != "rest") {
+    playerAnswer = prompt(
+      "Explore?! Not for long.. I think I see someone over there! Someone....living. Will you walk over and ask for help?"
+    );
   } else {
-    playerAnswer = alert("Nice choice. You have completed Level One.");
+    playerAnswer = prompt(
+      "* YAWN * Much better.. Hmm I think I see someone over there! Someone....living. Will walk over and ask for help?"
+    );
+  }
+  if (playerAnswer != "no") {
+    playerAnswer = alert(
+      "Haven't you watched any movies?! Taserface has hit you over the head with a shovel and taken your shelter! ❌GAME OVER❌"
+    );
+  } else {
+    playerAnswer = alert(
+      "Ahh nice choice. You have made it to the second level!🥳"
+    );
   }
 };
 const btn = document.querySelector("button");
